@@ -21,6 +21,7 @@ function renderHTMLFile(employees) {
     <body>
         <header class="justify-content-center">
             <h1 class="text-center m-0 title">Meet The Team!</h1>
+            <h6 class="text-center m-0">Hover over each card to meet us!</h6>
         </header>
 
         <main>

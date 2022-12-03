@@ -38,6 +38,7 @@ body {
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     font-family: cursive;
+    transition: color 1s, background 1s;
 }
 
 .card:hover {
@@ -46,11 +47,12 @@ body {
     transition: color 1s, background 1s;
     cursor: default;
 }
-.card:hover:before,
-.card:hover:after {
-    /* animation: none; */
-    /* opacity: 0; */
-}
+
+/* .card:hover:before,
+.card:hover:after { */
+/* animation: none; */
+/* opacity: 0; */
+/* } */
 
 .card::before {
     content: "";
