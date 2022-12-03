@@ -1,0 +1,22 @@
+{
+    "name": "module10challenge",
+    "version": "1.0.0",
+    "description": "OOP and testing for Module 10 Challenge",
+    "directories": {
+        "lib": "lib",
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "jest --verbose test/*",
+        "start": "node index.js",
+        "reset": "node reset.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "inquirer": "8.2.4"
+    },
+    "devDependencies": {
+        "jest": "^29.3.1"
+    }
+}
