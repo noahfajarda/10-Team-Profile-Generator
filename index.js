@@ -12,6 +12,11 @@ function newEmployee() {
     inquirer
         .prompt([
             {
+                type: "input",
+                name: "name",
+                message: "What is the name of this employee?",
+            },
+            {
                 type: "list",
                 name: "position",
                 message: "What position is this employee?",
@@ -19,18 +24,13 @@ function newEmployee() {
             },
             {
                 type: "input",
-                name: "name",
-                message: "What is the name of this employee?",
+                name: "id",
+                message: "What is the id of this employee?",
             },
             {
                 type: "input",
                 name: "email",
                 message: "What is the email of this employee?",
-            },
-            {
-                type: "input",
-                name: "id",
-                message: "What is the id of this employee?",
             },
         ])
         .then(({ position, name, email, id }) => {
