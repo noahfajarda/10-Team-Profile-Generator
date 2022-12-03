@@ -64,6 +64,9 @@ function renderHTMLFile(employees) {
                 <div class="card">Magic Card</div>
             </section> -->
         </main>
+        <footer>
+            <h4 id="meetAll">Meet All Of Us!</h4>
+        </footer>
         
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
