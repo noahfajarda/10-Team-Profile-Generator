@@ -1,9 +1,4 @@
-const fs = require("fs");
 
-function renderHTMLFile(employees) {
-    fs.writeFileSync(
-        "./../../inddex.html",
-        /*html*/ `
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -25,36 +20,58 @@ function renderHTMLFile(employees) {
 
         <main>
             <section class="main-section">
-                ${employees
-                    .map((employee) => {
-                        const role = employee.getRole();
-                        let extra;
-
-                        extra = {
-                            // add extra roles
-                            Manager: `Office Number: ${employee.officeNumber}`,
-                            Engineer: `Github: <a href="https://github.com/${employee.github}" target="_blank">${employee.github}</a>`,
-                            Intern: `School: ${employee.school}`,
-                        };
-
-                        return /*html*/ `
-                    <!-- CODEPEN CARD -->
+                
                     <div class="card">
                         <section>
                             <ul>
-                                <li>Name: ${employee.getName()}</li>
-                                <li>ID: ${employee.getId()}</li>
-                                <li>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
-                                <li>${role}</li>
-                                <li>${extra[role]}</li>
+                                <li>Name: jason</li>
+                                <li>ID: asdf@gmail.com</li>
+                                <li>Email: <a href="mailto:aweff">aweff</a></li>
+                                <li>Intern</li>
+                                <li>School: aewrv</li>
                             </ul>
                         </section>
                     </div>
-                `;
-                    })
-                    .join("")}
+                
+                    <div class="card">
+                        <section>
+                            <ul>
+                                <li>Name: waoeifnw</li>
+                                <li>ID: ere</li>
+                                <li>Email: <a href="mailto:erg">erg</a></li>
+                                <li>Intern</li>
+                                <li>School: we</li>
+                            </ul>
+                        </section>
+                    </div>
+                
+                    <div class="card">
+                        <section>
+                            <ul>
+                                <li>Name: wervrev</li>
+                                <li>ID: ere</li>
+                                <li>Email: <a href="mailto:efb">efb</a></li>
+                                <li>Engineer</li>
+                                <li>Github: <a href="https://github.com/asfe" target="_blank">asfe</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                
+                    <div class="card">
+                        <section>
+                            <ul>
+                                <li>Name: erv</li>
+                                <li>ID: serg</li>
+                                <li>Email: <a href="mailto:serb">serb</a></li>
+                                <li>Manager</li>
+                                <li>Office Number: awerg</li>
+                            </ul>
+                        </section>
+                    </div>
+                
             </section>
 
+            <!-- CODEPEN CARD -->
             <!-- <section class="main-section">
                 <div class="card">Magic Card</div>
                 <div class="card">Magic Card</div>
@@ -80,8 +97,4 @@ function renderHTMLFile(employees) {
             crossorigin="anonymous"
         ></script>
     </body>
-</html>`
-    );
-}
-
-module.exports = renderHTMLFile;
+</html>
