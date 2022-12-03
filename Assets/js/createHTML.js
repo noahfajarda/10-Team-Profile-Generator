@@ -2,7 +2,7 @@ const fs = require("fs");
 
 function renderHTMLFile(employees) {
     fs.writeFileSync(
-        "./index.html",
+        "./../../index.html",
         /*html*/ `
 <!DOCTYPE html>
 <html lang="en">
