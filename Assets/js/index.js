@@ -18,14 +18,21 @@ function newEmployee() {
             },
             {
                 type: "list",
+                name: "gender",
+                message: "What is the gender of this employee?",
+                choices: ["Male", "Female"],
+            },
+            {
+                type: "list",
                 name: "position",
                 message: "What position is this employee?",
                 choices: ["Manager", "Intern", "Engineer"],
             },
             {
-                type: "input",
+                type: "number",
                 name: "id",
-                message: "What is the id of this employee?",
+                message:
+                    "What is the id of this employee (Please enter a NUMBER)?",
             },
             {
                 type: "input",
@@ -33,7 +40,7 @@ function newEmployee() {
                 message: "What is the email of this employee?",
             },
         ])
-        .then(({ position, name, email, id }) => {
+        .then(({ position, name, gender, email, id }) => {
             switch (position) {
                 case "Manager":
                     inquirer
@@ -45,9 +52,10 @@ function newEmployee() {
                             },
                         ])
                         .then(({ officeNumber }) => {
-                            employees.push(
-                                new Manager(name, id, email, officeNumber)
-                            );
+                            employees.push([
+                                new Manager(name, id, email, officeNumber),
+                                gender,
+                            ]);
 
                             another();
                         });
@@ -63,7 +71,10 @@ function newEmployee() {
                             },
                         ])
                         .then(({ school }) => {
-                            employees.push(new Intern(name, id, email, school));
+                            employees.push([
+                                new Intern(name, id, email, school),
+                                gender,
+                            ]);
 
                             another();
                         });
@@ -80,9 +91,10 @@ function newEmployee() {
                             },
                         ])
                         .then(({ github }) => {
-                            employees.push(
-                                new Engineer(name, id, email, github)
-                            );
+                            employees.push([
+                                new Engineer(name, id, email, github),
+                                gender,
+                            ]);
 
                             another();
                         });
@@ -105,7 +117,10 @@ function another() {
         ])
         .then(({ more }) => {
             if (more) newEmployee();
-            else renderHTMLFile(employees);
+            else {
+                console.log(employees);
+                renderHTMLFile(employees);
+            }
         });
 }
 

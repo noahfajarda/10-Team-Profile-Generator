@@ -10,6 +10,9 @@ class Employee {
         return this.name;
     }
     getId() {
+        if (this.id == NaN) {
+            this.id = "None";
+        }
         return this.id;
     }
     getEmail() {

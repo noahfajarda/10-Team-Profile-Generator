@@ -1,76 +1,134 @@
-/* CODEPEN CARD */
-/* https://codepen.io/gayane-gasparyan/pen/jOmaBQK */
 @property --rotate {
     syntax: "<angle>";
     initial-value: 132deg;
     inherits: false;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Raleway:wght@600&display=swap");
+
 :root {
-    --card-height: 450px;
-    --card-width: calc(var(--card-height) / 1.5);
+    --card-border-radius: 20px;
+    --hover-image-size: 100px;
+    --initial-image-size: 280px;
+}
+
+html {
+    background-color: #172a74;
+    background-image: linear-gradient(to right, #172a74, #21a9af);
+    background-size: contain;
 }
 
 body {
-    min-height: 100vh;
-    background: #212534;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    color: white;
+}
+
+header {
+    padding-top: 200px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 200px 80px 200px;
+}
+
+.title,
+.name {
+    font-size: 45px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.title {
+    font-size: 150px;
+}
+
+.subtitle {
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 60px;
+}
+
+.headshot {
+    height: var(--hover-image-size);
+    width: var(--hover-image-size);
+    border-radius: 100px;
+    margin: 10px;
+    margin-bottom: 0px;
+    box-shadow: 0 2px 2px 1px rgb(0 0 0 / 50%);
+}
+
+.role {
+    margin: 0px;
+    font-size: 20px;
+    padding: 2px;
+    color: black;
+}
+
+.heading-card {
+    color: white;
+    padding: 1px;
+    background-color: #6495ed;
+    border-radius: var(--card-border-radius) var(--card-border-radius) 0px 0px;
+    text-align: center;
+    /* height: 100%; */
+}
+
+/* FIND A WAY TO HOVER THEN VIEW INFORMATION */
+/* .card-container {
+} */
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 160px;
+}
+
+.description {
+    text-align: center;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 11px;
+    justify-content: space-between;
+}
+
+svg {
+    height: 12px;
+    margin-right: -10;
 }
 
 .card {
-    background: #6495ed;
-    width: var(--card-width);
-    height: var(--card-height);
-    padding: 3px;
-    margin: 20px;
-    position: relative;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
-    transition: color 1s, background 1s;
-}
-
-.card:hover {
-    color: rgb(88 199 250 / 100%);
-    background: white;
-    transition: color 1s, background 1s;
-    cursor: default;
-}
-
-#meetAll {
-    padding: 10px;
-    border-style: solid;
-    border-radius: 20px;
-    border-width: 1px;
-    transition: color 0.5s;
-}
-
-#meetAll:hover {
+    height: 400px;
+    top: 0px;
+    width: 300px;
+    background-color: white;
+    margin: 40px;
+    border-radius: var(--card-border-radius);
     color: black;
-    transition: color 0.5s;
-}
-
-/* ASK ABOUT HOVER AFFECTING CARDS */
-#meetAll:hover + .card {
-    background: green;
-    color: red;
+    position: relative;
+    transition: top 0.3s;
 }
 
 .card::before {
     content: "";
-    width: 104%;
-    height: 102%;
+    width: 106%;
+    height: 104%;
     border-radius: 25px;
     background-image: linear-gradient(
         var(--rotate),
@@ -80,32 +138,15 @@ body {
     );
     position: absolute;
     z-index: -1;
-    top: -1%;
-    left: -2%;
+    top: -2%;
+    left: -3%;
     animation: spin 2.5s linear infinite;
+    box-shadow: 15px 15px 5px black;
 }
 
-.card::after {
-    position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-        var(--rotate),
-        #5ddcff,
-        #3c67e3 43%,
-        #4e00c2
-    );
-    opacity: 1;
-    transition: opacity 0.5s;
-    animation: spin 2.5s linear infinite;
+.card:hover {
+    top: -10px;
+    cursor: default;
 }
 
 @keyframes spin {
@@ -117,52 +158,11 @@ body {
     }
 }
 
-a {
-    color: #212534;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-top: 2rem;
-}
-
-/* CODEPEN CARD */
-
-body {
-    background: linear-gradient(135deg, #172a74, #21a9af);
-    background-size: 150% 150%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-}
-
-header {
-    padding: 20px;
-}
-
-.title {
-    font-size: 90px;
-}
-
-main {
-    padding: 20px;
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
-}
-
-ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-.main-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
+@media only screen and (max-width: 1200px) {
+    .title {
+        font-size: 100px;
+    }
+    header {
+        padding-top: 60px;
+    }
 }
