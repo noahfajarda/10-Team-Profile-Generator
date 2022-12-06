@@ -6,12 +6,12 @@ This project is an attempt to create a program, with the help of the external 'I
 
 subclasses, super, tests
 
-![](https://github.com/noahfajarda/09-README-Generator/blob/main/Assets/README-GENERATOR-DEMO.gif)
+![](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/PROFILE-GENERATOR-DEMO.gif)
 
 ## Screenshot
 
-![App Screenshot](https://github.com/noahfajarda/09-README-Generator/blob/main/Assets/Screenshot1.png)
-![App Screenshot](https://github.com/noahfajarda/09-README-Generator/blob/main/Assets/Screenshot2.png)
+![App Screenshot](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot1.png)
+![App Screenshot](hhttps://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot2.png)
 
 need to create a video that demonstrates functionality
 Submission:
