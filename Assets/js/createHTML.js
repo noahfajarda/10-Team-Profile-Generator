@@ -50,18 +50,13 @@ function renderHTMLFile(employees) {
             <h1 class="title">Meet The Team!</h1>
             <h6 class="subtitle">Hover over each card to meet us!</h6>
         </header>
-
-
         <main>
-            
             ${employees
                 .map((employee) => {
                     // get gender & reset employee variable
-                    var gender = employee[1];
-                    var employee = employee[0];
+                    var [employee, gender] = employee;
                     const role = employee.getRole();
-                    let extra;
-                    let imageNumber;
+                    let extra, imageNumber;
 
                     if (imageIndicies.length == 0) {
                         imageIndicies = [1, 2, 3, 4, 5, 6];
@@ -174,7 +169,6 @@ function renderHTMLFile(employees) {
             `;
                 })
                 .join("")}
-        
         </main>
     </body>
 </html>`

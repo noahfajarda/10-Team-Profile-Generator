@@ -13,7 +13,6 @@
 }
 
 html {
-    background-color: #172a74;
     background-image: linear-gradient(to right, #172a74, #21a9af);
     background-size: contain;
 }
@@ -58,9 +57,9 @@ main {
 }
 
 .headshot {
-    height: var(--hover-image-size);
-    width: var(--hover-image-size);
-    border-radius: 100px;
+    height: var(--initial-image-size);
+    width: var(--initial-image-size);
+    border-radius: 50%;
     margin: 10px;
     margin-bottom: 0px;
     box-shadow: 0 2px 2px 1px rgb(0 0 0 / 50%);
@@ -79,12 +78,18 @@ main {
     background-color: #6495ed;
     border-radius: var(--card-border-radius) var(--card-border-radius) 0px 0px;
     text-align: center;
-    /* height: 100%; */
 }
 
-/* FIND A WAY TO HOVER THEN VIEW INFORMATION */
-/* .card-container {
-} */
+.heading-card img {
+    transition: height 300ms linear, width 300ms linear;
+}
+
+.card-container {
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    max-height: 400px;
+    background-color: #6495ed;
+}
 
 .info-card {
     display: flex;
@@ -92,6 +97,10 @@ main {
     justify-content: space-between;
     padding: 20px;
     height: 160px;
+    transform: translateY(200px);
+    background-color: white;
+    transition: transform 0.4s;
+    /* cubic-bezier(0.18, 1.79, 0.75, 0.77) */
 }
 
 .description {
@@ -149,6 +158,92 @@ svg {
     cursor: default;
 }
 
+.card:hover .info-card {
+    transform: translateY(0);
+}
+
+.card:hover img {
+    height: var(--hover-image-size);
+    width: var(--hover-image-size);
+}
+
+/* music */
+.playpause {
+    width: 35px;
+    height: 35px;
+    margin-top: 40px;
+    background: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    clip-path: polygon(
+        0 0,
+        50% 25%,
+        50% 75%,
+        50% 75%,
+        50% 25%,
+        100% 50%,
+        100% 50%,
+        0% 100%
+    );
+}
+
+.playpause.playing {
+    clip-path: polygon(
+        0 0,
+        40% 0,
+        40% 100%,
+        60% 100%,
+        60% 0,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+}
+
+#wave {
+    position: absolute;
+    width: 1000px;
+    height: 75px;
+    top: 115px;
+}
+
+.loader {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader .stroke {
+    background: #f1f1f1;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+    animation: animate 1.4s linear infinite;
+}
+
+.stroke:nth-child(1) {
+    animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+    animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+    animation-delay: 0s;
+}
+
 @keyframes spin {
     0% {
         --rotate: 0deg;
@@ -158,11 +253,28 @@ svg {
     }
 }
 
+@keyframes animate {
+    50% {
+        height: 20%;
+        background: #4286f4;
+    }
+
+    100% {
+        background: #4286f4;
+        height: 100%;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .title {
         font-size: 100px;
     }
     header {
         padding-top: 60px;
+    }
+    #wave {
+        width: 1000px;
+        height: 40px;
+        top: 115px;
     }
 }
