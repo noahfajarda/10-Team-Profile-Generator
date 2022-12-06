@@ -46,6 +46,16 @@ function renderHTMLFile(employees) {
         <title>Workplace Team</title>
     </head>
     <body>
+        <div class="playpause"></div>
+        <div id="wave">
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+        </div>
         <header>
             <h1 class="title">Meet The Team!</h1>
             <h6 class="subtitle">Hover over each card to meet us!</h6>
@@ -170,6 +180,29 @@ function renderHTMLFile(employees) {
                 })
                 .join("")}
         </main>
+        <script>
+            window.addEventListener("load", () => {
+                const btn = document.querySelector(".playpause");
+                const wave = document.querySelector("#wave");
+                var audio = new Audio("./Assets/music/Daydreamin.mp3");
+                var isPlaying = false;
+                audio.volume = 0.05;
+
+                btn.addEventListener("click", () => {
+                    btn.classList.toggle("playing");
+                    if (!isPlaying) {
+                        audio.play();
+                        wave.classList.add("loader");
+                        isPlaying = true;
+                    } else {
+                        audio.pause();
+                        wave.classList.remove("loader");
+                        isPlaying = false;
+                    }
+                    console.log(isPlaying);
+                });
+            });
+        </script>
     </body>
 </html>`
     );
