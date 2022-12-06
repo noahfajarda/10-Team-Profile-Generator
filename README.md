@@ -11,7 +11,7 @@ subclasses, super, tests
 ## Screenshot
 
 ![App Screenshot](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot1.png)
-![App Screenshot](hhttps://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot2.png)
+![App Screenshot](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot2.png)
 
 need to create a video that demonstrates functionality
 Submission:
