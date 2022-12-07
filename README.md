@@ -8,7 +8,7 @@ This project was developed with specific tests to ensure that the 'Employee' cla
 
 ![](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/PROFILE-GENERATOR-DEMO.gif)
 
-## Screenshot
+## Screenshots
 
 ![App Screenshot](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot1.png)
 ![App Screenshot](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot2.png)
