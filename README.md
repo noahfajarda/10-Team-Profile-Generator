@@ -2,9 +2,9 @@
 
 ## Description
 
-This project is an attempt to create a program, with the help of the external 'Inquirer' package, that will generate a custom README.md file based on a user's preferences. These preferences include a project's description, usage, contributions, and more. This application consists of various questions with different input types depending on the question, such as text input or multiple choice input. After a user has answered these questions, the data is stored in an object that is, then, extracted to generate the README.md file using the external 'generateMarkdown.js' file. This external file returns a template to retrieve and write information to the eventual README.md file. The README.md file will then be created and can be accessed in the current directory.
+This project is an attempt to create a program, with the help of the external 'Inquirer' package, that will generate a custom 'Team Profile' page based on a user's input. The user can create employees using the CLI and can include an employee's name, gender, position, and id. Different additional questions are asked depending on the user's input for the employee's positions. For example, if the user selects 'Engineer' as the employee's position, the user is prompted for the employee's github username. On the other hand, if the user sets the employee's position as 'Manager', the user is prompted for the employee's office number. After the user completes all questions, the user data is returned as an array of employee objects that are created with classes. Each position that can be selected is created with subclasses that include unique parameters and extend a parent class 'Employee'. An HTML file is, then, generated based on the inputted information. Each employee will have a dedicated card that can be viewed to show their personal information based on the user's input.
 
-subclasses, super, tests
+This project was developed with specific tests to ensure that the 'Employee' class & it's subclasses were built correctly.
 
 ![](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/PROFILE-GENERATOR-DEMO.gif)
 
@@ -12,9 +12,3 @@ subclasses, super, tests
 
 ![App Screenshot](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot1.png)
 ![App Screenshot](https://github.com/noahfajarda/10-Team-Profile-Generator/blob/main/Assets/visuals/README_assets/Screenshot2.png)
-
-need to create a video that demonstrates functionality
-Submission:
----link to video
----link to repo of HW
----include link to video to readme as well
