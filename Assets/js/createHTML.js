@@ -139,7 +139,7 @@ function renderHTMLFile(employees) {
             <div class="card">
                 <div class="card-container">
                     <section class="heading-card">
-                        <img src="/Assets/visuals/headshots/headshot${imageNumber}.png" alt="headshot_${imageNumber}" class="headshot"/>
+                        <img src="./Assets/visuals/headshots/headshot${imageNumber}.png" alt="headshot_${imageNumber}" class="headshot"/>
                         <p class="name">${employee.getName()}</p>
                         <p class="role">${extra[role][2]}</p>
                     </section>
